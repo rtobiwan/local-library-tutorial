@@ -201,6 +201,27 @@ exports.book_delete_get = function (req, res) {
   res.send('NOT IMPLEMENTED: Book delete GET');
 };
 
+// Display book delete form on GET.
+// exports.book_delete_get = function(req, res, next) {
+
+//   async.parallel({
+//       author(callback) {
+//           Author.findById(req.params.id).exec(callback)
+//       },
+//       authors_books(callback) {
+//           Book.find({ 'author': req.params.id }).exec(callback)
+//       },
+//   }, function(err, results) {
+//       if (err) { return next(err); }
+//       if (results.author==null) { // No results.
+//           res.redirect('/catalog/authors');
+//       }
+//       // Successful, so render.
+//       res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
+//   });
+
+// };
+
 // Handle book delete on POST.
 exports.book_delete_post = function (req, res) {
   res.send('NOT IMPLEMENTED: Book delete POST');
